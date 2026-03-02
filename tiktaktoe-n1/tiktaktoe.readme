@@ -1,0 +1,22 @@
+Documentação do Projeto (N1 - E1)
+Estudante: Marcos Zacchi
+Curso: Engenharia de Software - 4º PeríodoDisciplina: Desenvolvimento de Dispositivos Móveis
+1. Descrição do Problema
+O objetivo foi implementar um jogo da velha funcional executado via console utilizando a linguagem Dart. 
+O programa gerencia um tabuleiro 3x3, valida entradas de dois jogadores alternados e identifica condições de vitória ou empate.
+
+2. Raciocínio Lógico e Funções
+Matriz do Tabuleiro: Foi utilizada uma List<List<String>> para representar as 
+coordenadas de linha e coluna, facilitando o acesso via índices numéricos.
+Validação de Entradas: 
+Implementado o uso de int.tryParse para garantir que o programa não finalize abruptamente 
+caso o usuário insira caracteres inválidos ou o compilador online adicione símbolos extras.
+Estrutura de Controle: O jogo roda dentro de um laço while, que permanece ativo até 
+que a variável gameOver seja alterada por uma condição de vitória ou empate.
+Verificação de Vitória (checkWinner): A função percorre a matriz utilizando laços for para linhas e colunas, 
+além de verificações manuais para as duas diagonais, utilizando o operador lógico && (AND) para confirmar o alinhamento.
+Alternância de Jogadores: Utilizado o operador ternário, uma forma compacta de realizar um if-else, para trocar entre 'X' e 'O' a cada rodada válida.
+
+3. Conceitos de Dart AplicadosNull Safety: Variáveis opcionais (String?) foram tratadas para evitar erros de ponteiro nulo.
+Coleções: Uso extensivo de listas tipadas para garantir a integridade dos dados.
+Visibilidade: As funções foram organizadas de forma clara para manter a legibilidade do código conforme as boas práticas da linguagem.
