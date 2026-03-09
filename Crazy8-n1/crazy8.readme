@@ -1,0 +1,38 @@
+# Simulador de Oito Maluco (Crazy Eights) em Dart
+
+Este projeto é um simulador automático do clássico jogo de cartas **Oito Maluco**, desenvolvido inteiramente na linguagem **Dart** para execução via console. O projeto foi construído aplicando conceitos avançados de Orientação a Objetos (POO).
+
+## Contexto Acadêmico
+- **Instituição:** Católica de Santa Catarina (Joinville)
+- **Curso:** Engenharia de Software (4º Período)
+- **Disciplina:** Desenvolvimento de Dispositivos Móveis
+- **Professor:** Diego Possamai
+- **Desenvolvedor:** Marcos Vinicius Da Silva Zacchi
+
+## Regras Implementadas na Simulação
+O simulador executa partidas automáticas entre 4 jogadores virtuais (P1, P2, P3 e P4) seguindo estas regras:
+1. Um baralho tradicional de 52 cartas é embaralhado e 5 cartas são distribuídas para cada jogador.
+2. A primeira carta do monte é virada para iniciar a pilha de descarte.
+3. No seu turno, o jogador deve descartar uma carta que combine com o **naipe** ou com o **valor** da carta no topo do descarte.
+4. **O Coringa (8):** A carta `8` pode ser jogada a qualquer momento. O jogador que a joga deve escolher (declarar) o naipe que o próximo jogador será obrigado a seguir.
+5. Se o jogador não tiver cartas válidas, ele compra do baralho até encontrar uma que possa ser jogada.
+6. Quando o baralho de compras esvazia, a pilha de descarte é reembaralhada (mantendo apenas o topo) para formar um novo baralho.
+7. O primeiro jogador a ficar sem cartas vence a partida.
+
+## Tecnologias e Conceitos Aplicados
+O código foi estruturado com foco em **Clean Code** e apresenta comentários explicativos linha a linha em todas as regras de negócio implementadas (exigência do projeto).
+
+- **Dart 3 & Null Safety:** Uso rigoroso de checagens de nulo (ex: `Suit? requiredSuit`, `Card? toPlay`).
+- **Orientação a Objetos (POO):** Criação de classes independentes (`Card`, `Deck`, `Player`, `CrazyEights`).
+- **Encapsulamento e Getters:** Uso de `get` para propriedades calculadas (ex: `bool get isEight`, `Card get top`).
+- **Coleções (Collections):** Manipulação intensiva de `List` (para mãos e baralho) e `Map` (para contagem e estratégia na escolha de naipes).
+- **Enums:** Uso de enumeradores (`Suit`, `ColorStyle`) para garantir a integridade dos dados (Evitando os "Magic Strings").
+
+##  Como Executar
+
+### Opção 1: VS Code (Local)
+1. Certifique-se de ter o [Dart SDK](https://dart.dev/get-dart) instalado na sua máquina.
+2. Clone este repositório ou baixe o arquivo `.dart`.
+3. Abra o terminal na pasta do arquivo e execute:
+   ```bash
+   dart run nome_do_arquivo.dart
