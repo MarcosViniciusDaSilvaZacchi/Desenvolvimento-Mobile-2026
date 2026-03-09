@@ -1,22 +1,26 @@
-Documentação do Projeto (N1 - E1)
-Estudante: Marcos Zacchi
-Curso: Engenharia de Software - 4º PeríodoDisciplina: Desenvolvimento de Dispositivos Móveis
-1. Descrição do Problema
-O objetivo foi implementar um jogo da velha funcional executado via console utilizando a linguagem Dart. 
-O programa gerencia um tabuleiro 3x3, valida entradas de dois jogadores alternados e identifica condições de vitória ou empate.
+# Desenvolvimento Mobile 2026 - Jogo da Velha
 
-2. Raciocínio Lógico e Funções
-Matriz do Tabuleiro: Foi utilizada uma List<List<String>> para representar as 
-coordenadas de linha e coluna, facilitando o acesso via índices numéricos.
-Validação de Entradas: 
-Implementado o uso de int.tryParse para garantir que o programa não finalize abruptamente 
-caso o usuário insira caracteres inválidos ou o compilador online adicione símbolos extras.
-Estrutura de Controle: O jogo roda dentro de um laço while, que permanece ativo até 
-que a variável gameOver seja alterada por uma condição de vitória ou empate.
-Verificação de Vitória (checkWinner): A função percorre a matriz utilizando laços for para linhas e colunas, 
-além de verificações manuais para as duas diagonais, utilizando o operador lógico && (AND) para confirmar o alinhamento.
-Alternância de Jogadores: Utilizado o operador ternário, uma forma compacta de realizar um if-else, para trocar entre 'X' e 'O' a cada rodada válida.
+Este repositório contém os projetos desenvolvidos para a disciplina de **Desenvolvimento Mobile** no curso de Engenharia de Software da **Católica de Santa Catarina**.
 
-3. Conceitos de Dart AplicadosNull Safety: Variáveis opcionais (String?) foram tratadas para evitar erros de ponteiro nulo.
-Coleções: Uso extensivo de listas tipadas para garantir a integridade dos dados.
-Visibilidade: As funções foram organizadas de forma clara para manter a legibilidade do código conforme as boas práticas da linguagem.
+##  Projeto: Jogo da Velha (Console)
+
+Um jogo clássico implementado em linguagem **Dart** para ser executado diretamente no terminal.
+
+###  Funcionalidades Implementadas
+- **Tabuleiro Dinâmico**: Visualização em grade 3x3 no terminal.
+- **Validação de Jogadas**: Sistema que impede jogadas em posições ocupadas ou fora dos limites (0-2).
+- **Lógica de Vitória**: Verificação automática de linhas, colunas e diagonais.
+- **Detecção de Empate**: Identifica quando o tabuleiro está cheio sem um vencedor (Velha).
+- **Interface Limpa**: Uso de comandos para limpar a tela a cada turno.
+
+###  Tecnologias Utilizadas
+- **Linguagem**: Dart
+- **Ambiente**: VS Code
+
+##  Como Executar
+1. Certifique-se de ter o SDK do Dart instalado.
+2. Navegue até a pasta: `cd tiktaktoe-n1`
+3. Execute o comando: `dart main.dart`
+
+---
+**Autor:** Marcos Vinicius Da Silva Zacchi
